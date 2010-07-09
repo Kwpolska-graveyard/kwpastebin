@@ -1,0 +1,21 @@
+#form {
+text-align: center;
+}
+pre {
+border: 1px solid #000000;
+margin: 1px;
+padding: 0px;
+max-width: 99%;
+width: 99%;
+white-space: pre-wrap;
+}
+
+/* little rules... and nothing else. do what you want, you can make it even dancing caramelldansen!
+what you can theme:
+h1
+ul, li - you can make a menu from it (made only for horizontal menus)
+#form (form will cause it work for menu's inputbox)
+pre (for code)
+html (not sure)
+*/
+

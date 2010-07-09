@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="Stylesheet" type="text/css" href="./style.css">
+<title>Kw's Pastebin</title>
+<!-- Kw's Pastebin
+Copyright Kwpolska 2010. Licensed on GPLv2. -->
+<h1 id="head">Kw's Pastebin</h1>
+<ul>
+	<li><a href="index.php">Add</a></li>
+	<li><form action="view.php" method="get">Go to: #<input name="id"></form>
+</ul>
+<?php include('upform.php'); ?>
