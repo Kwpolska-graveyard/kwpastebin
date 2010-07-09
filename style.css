@@ -7,15 +7,16 @@ margin: 1px;
 padding: 0px;
 max-width: 99%;
 width: 99%;
-white-space: pre-wrap;
+white-space: pre-wrap; /* please don't touch it */
 }
 
-/* little rules... and nothing else. do what you want, you can make it even dancing caramelldansen!
-what you can theme:
+/* little rules... and nothing else. do what you want.
+what you can change:
 h1
 ul, li - you can make a menu from it (made only for horizontal menus)
 #form (form will cause it work for menu's inputbox)
-pre (for code)
+pre (above)
 html (not sure)
+A little tip:
 */
 
