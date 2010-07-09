@@ -1,1 +1,4 @@
-To 'install' it, just put it in document root, edit config.php and execute install.php file.
+1. Put the files on server.
+2. Edit config.php.
+3. Execute install.php file.
+That's it!
