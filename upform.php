@@ -4,7 +4,7 @@
  echo '
 <form action="send.php" method="post">
 <div id="form">
-	<textarea name="code" rows="25" cols="25" style="width: 100%; height: 25% border-color: #000000;"></textarea><br />
+	<textarea name="code" rows="25" cols="25" style="width: 99%; height: 25% border-color: #000000;"></textarea><br />
 	<select name="lng"> 
 	<optgroup label="Popular">
 		<option>bash</option> <option>c</option> <option>cpp</option> <option>csharp</option> <option>css</option> <option>html4strict</option> <option>java5</option> <option>java</option> <option>javascript</option> <option>php</option> <option>perl</option> <option>python</option> <option>rails</option> <option>ruby</option> <option>sql</option> <option selected="selected">text</option>
