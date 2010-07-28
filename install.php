@@ -1,8 +1,9 @@
 <?php
-ob_start();
 //Kw's Pastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './config.php';
+include_once './header.php';
+if (isset($_GET['mode']) && $_GET['mode'] == 'install') {
 try
 	{
 		$pdo = new PDO(DB_DSN, DB_USR, DB_PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -18,4 +19,8 @@ catch(PDOException $e)
 	{
 		echo 'It failed. (code: none), error message:' . $e->getMessage();
 	}
+} else {
+echo 'not ready yet, edit config.php and click here: <a href="./install.php?mode=install">Step 2</a>';
+}
+include_once './footer.php';
 ?>
