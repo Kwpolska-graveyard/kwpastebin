@@ -12,7 +12,7 @@ try
 				`language` VARCHAR( 50 ) NOT NULL ,
 				`timestamp` VARCHAR( 50 ) NOT NULL
 				) ENGINE = MYISAM');
-		if ($stmt == 0) echo 'It failed. (code: 0)' else echo 'Congratulations. (code: 1)';
+		if ($stmt == 0) echo 'It failed. (code: 0)'; else echo 'Congratulations. (code: 1)';
 	}
 catch(PDOException $e)
 	{
