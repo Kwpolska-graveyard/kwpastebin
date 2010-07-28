@@ -8,7 +8,7 @@ try
 		$pdo = new PDO(DB_DSN, DB_USR, DB_PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$time = time();
-		$stmt = $pdo -> prepare('INSERT INTO `kwpastebin` (`code`, `language`, `timestamp`)	VALUES(
+		$stmt = $pdo -> prepare('INSERT INTO `'.DB_TNM.'` (`code`, `language`, `timestamp`)	VALUES(
 				:code,
 				:language,
 				:time)');
