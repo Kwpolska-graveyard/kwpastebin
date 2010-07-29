@@ -3,6 +3,7 @@
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './header.php';
 include_once './config.php';
+include_once './geshi.php';
 try
 	{
 		$pdo = new PDO(DB_DSN, DB_USR, DB_PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
