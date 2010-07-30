@@ -8,9 +8,9 @@ echo '<!DOCTYPE html>
 <title>'.KP_NME.'</title>
 <!-- Kw\'s Pastebin
 Copyright Kwpolska 2010. Licensed on GPLv2. -->
-<h1 id="head">'.KP_NME.'</h1>
+<h1>'.KP_NME.'</h1>
 <ul>
 	<li><a href="index.php">Add</a></li>
-	<li><form action="view.php" method="get">Go to: #<input name="id"></form>
+	<li><form action="view.php" method="get">Go to: #<input name="id"></form></li>
 </ul>';
 ?>
