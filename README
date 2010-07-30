@@ -1,8 +1,8 @@
 Kw's Pastebin. Minimalistic as hell.
+
 The pastebin was written originally on request for personal use. Now, the project was published.
 
-Check out the INSTALL file. I promise it wouldn't take long.
-The project requires PHP 5.1 or newer. PHP 5.0 requires getting PDO.
+Check out the INSTALL file. I promise it wouldn't take long. The project requires PHP 5.1 or newer. PHP 5.0 requires getting PDO.
 
 Copyright (C) 2010 Kwpolska.
 
