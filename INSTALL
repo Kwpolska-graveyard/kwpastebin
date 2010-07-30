@@ -1,4 +1,3 @@
 1. Put the files on server.
-2. Edit config.php.
-3. Execute install.php file.
-That's it!
+2. Execute install.php file (KwInstaller, use any browser).
+3. That's it!
