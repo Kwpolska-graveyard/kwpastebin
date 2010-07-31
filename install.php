@@ -1,14 +1,12 @@
 <?php
-//Kw's Pastebin
-//Copyright Kwpolska 2010. Licensed on GPLv2.
-include_once './header.php';
 //Kw's Installer
-//Part of Kw's Random Utils
+//Part of KRU
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 if (count($_POST) == 0) {
 echo '<form method="POST" action="install.php">
-Welcome to the awesome KwInstaller. The only thing I will let you is to edit my config file.
-<textarea name="config" cols="80" rows="24">'.file_get_contents('./config.php').'</textarea>
+Welcome to the awesome KwInstaller. The only thing I will let you is to edit my config file.<br>
+<textarea name="config" cols="80" rows="24">'.file_get_contents('./config.php').'</textarea><br>
+<input type="submit" value="ok">
 </form>';
 } else {
 file_put_contents('./config.php', $_POST['config']);
@@ -29,5 +27,4 @@ catch(PDOException $e)
 		echo 'It failed. (code: none), error message:' . $e->getMessage();
 	}
 }
-include_once './footer.php';
 ?>
