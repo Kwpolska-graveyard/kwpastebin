@@ -1,5 +1,5 @@
 <?php
-//Kw's Pastebin
+//KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './header.php';
 include_once './config.php';

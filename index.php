@@ -1,6 +1,6 @@
 <?php
-// Kw's Pastebin.
-// Copyright Kwpolska 2010. Licensed on GPLv2.
+//KwPastebin
+//Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './header.php';
 ?>
 <form action="send.php" method="post">

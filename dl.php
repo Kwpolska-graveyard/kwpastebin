@@ -2,7 +2,7 @@
 include_once './config.php';
 header('Content-type: text/plain');
 header('Content-Disposition: attachment; filename="'.KP_FLN.".txt"');
-//Kw's Pastebin
+//KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 try
 	{

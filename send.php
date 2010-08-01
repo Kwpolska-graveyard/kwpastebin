@@ -1,6 +1,6 @@
 <?php
 ob_start();
-//Kw's Pastebin
+//KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './config.php';
 try

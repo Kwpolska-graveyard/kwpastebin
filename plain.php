@@ -1,6 +1,6 @@
 <?php
 header('Content-type: text/plain');
-//Kw's Pastebin
+//KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
 include_once './config.php';
 try
