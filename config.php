@@ -1,7 +1,7 @@
 <?php
 //KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv2.
-define('KP_NME', 'Kw\'s Pastebin'); // page name
+define('KP_NME', 'KwPastebin'); // page name
 define('KP_FLN', 'kwpastebin-output'); // output file name, it's txt
 define('DB_USR', 'root'); // the user
 define('DB_PWD', 'password'); // database password
