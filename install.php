@@ -2,8 +2,8 @@
 //KwInstaller
 //Part of KRU
 //Copyright Kwpolska 2010. Licensed on GPLv2.
-if (count($_POST) == 0) {
-echo 'Edit the config file and press continue. <form method="POST" action="install.php"><input type="submit" value="continue"></form>';
+if (count($_GET) == 0) {
+echo 'Edit the config file and press continue. <form method="GET" action="install.php"><input type="submit" name="a" value="continue"></form>';
 } else {
 try
 	{
@@ -15,7 +15,7 @@ try
 				`language` VARCHAR( 50 ) NOT NULL ,
 				`timestamp` VARCHAR( 50 ) NOT NULL
 				) ENGINE = MYISAM'); // edit it with your needs. example from kwpastebin.
-		if ($stmt == 0) { die('It failed. (code: 0)'); } else { echo 'Congratulations. (code: 1)' };
+		if ($stmt == 0) { die('It failed. (code: 0)'); } else { echo 'Congratulations. (code: 1)'; };
 		unlink('install.php') or die(' failed to remove installer');
 	}
 catch(PDOException $e)
