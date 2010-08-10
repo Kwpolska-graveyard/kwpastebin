@@ -1,6 +1,6 @@
 <?php
 //KwPastebin
-//Copyright Kwpolska 2010. Licensed on GPLv2.
+//Copyright Kwpolska 2010. Licensed on GPLv3.
 define('KP_NME', 'KwPastebin'); // page name
 define('KP_FLN', 'kwpastebin-output'); // output file name, it's txt
 define('DB_USR', 'root'); // the user

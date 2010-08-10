@@ -1,7 +1,7 @@
 <?php
 ob_start();
 //KwPastebin
-//Copyright Kwpolska 2010. Licensed on GPLv2.
+//Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
 try
 	{

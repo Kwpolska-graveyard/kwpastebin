@@ -1,7 +1,7 @@
 <?php
 //KwInstaller
 //Part of KRU
-//Copyright Kwpolska 2010. Licensed on GPLv2.
+//Copyright Kwpolska 2010. Licensed on GPLv3.
 error_reporting(-1); ini_set('display_errors', 'on');
 if (count($_GET) == 0) {
 echo 'Edit the config file and press continue. <form method="GET" action="install.php"><input type="submit" name="a" value="continue"></form>';
