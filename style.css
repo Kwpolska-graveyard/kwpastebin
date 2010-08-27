@@ -13,9 +13,7 @@ white-space: pre-wrap; /* please don't touch it */
 /* little rules... and nothing else. do what you want.
 what you can change:
 h1
-ul, li - you can make a menu from it (made only for horizontal menus)
-#form (form will cause it work for menu's inputbox)
-pre (above)
-html (not sure)
+ul, li - you can make a menu from it
+#form
+pre (see above)
 */
-

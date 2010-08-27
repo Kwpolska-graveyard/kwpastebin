@@ -26,10 +26,6 @@ try
 			die('Adding... failed!');
 		}
 		// Okay, we've added it, so now, I have to send user to it...
-		/*$id = $pdo -> lastInsertId; //unused route
-		$VIEWPP = "another unused route, sorry.";
-		$url = $VIEWPP.'?id='.$id;
-		hey, this file has two unused routes! yay! */
 		header('Location: ./view.php?id='.$time);
 	}
 catch(PDOException $e)

@@ -1,9 +1,9 @@
 <?php
 //KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv3.
-include_once './header.php';
 include_once './config.php';
 include_once './geshi.php';
+ob_start();
 try
 	{
 		$pdo = new PDO(DB_DSN, DB_USR, DB_PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
@@ -22,5 +22,6 @@ catch(PDOException $e)
 	{
 		echo 'ERROR: ' . $e->getMessage();
 	}
-include_once './footer.php';
+$content = ob_end_flush();
+savant();
 ?>

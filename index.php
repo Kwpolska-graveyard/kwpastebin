@@ -1,7 +1,8 @@
 <?php
 //KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv3.
-include_once './header.php';
+include_once './config.php';
+ob_start();
 ?>
 <form action="send.php" method="post">
 <div id="form">
@@ -40,5 +41,6 @@ include_once './header.php';
 </div>
 </form>
 <?php
-include_once './footer.php';
+$content = ob_end_flush();
+savant();
 ?>
