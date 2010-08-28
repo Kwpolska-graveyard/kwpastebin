@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<link rel="Stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" href="./style.css">
 <title><?php echo $this->eprint($this->$title) ?></title>
 <!-- KwPastebin
 Copyright Kwpolska 2010. Licensed on GPLv3. -->
