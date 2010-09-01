@@ -1,16 +1,16 @@
-KwPastebin. No bloat available.
---------------
+KwPastebin. First steps at git.
+==============
 
-PURPOSE:
---------------
-The pastebin was written originally on request, now the project was published. Just a normal pastebin.
+PURPOSE
+==============
+Pastebin. Simple pastebin.
 
-INSTALLATION:
---------------
-Edit the config.php and execute install.php.
+INSTALLATION
+==============
+Check out INSTALL.
 
-COPYRIGHT:
---------------
+COPYRIGHT
+==============
 Copyright (C) 2010 Kwpolska.
 
 This program is free software: you can redistribute it and/or modify
@@ -25,4 +25,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
