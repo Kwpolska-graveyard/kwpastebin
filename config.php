@@ -11,6 +11,7 @@ define('DB_TNM', 'kwpastebin'); //table name
 define('DB_HST', 'localhost'); //host
 define('DB_DSN', 'mysql:host='.DB_HST.';dbname='.DB_NME); // change mysql if needed
 function savant() {
+	global $content;
 	include_once 'Savant3.php';
 	$tpl = new Savant3();
 	$tpl->setEscape();
