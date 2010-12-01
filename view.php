@@ -22,6 +22,6 @@ catch(PDOException $e)
 {
 	echo 'ERROR: ' . $e->getMessage();
 }
-$content = ob_end_flush();
+$content = ob_get_clean();
 savant();
 ?>
