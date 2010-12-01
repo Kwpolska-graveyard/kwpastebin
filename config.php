@@ -11,10 +11,11 @@ define('DB_TNM', 'kwpastebin'); //table name
 define('DB_HST', 'localhost'); //host
 define('DB_DSN', 'mysql:host='.DB_HST.';dbname='.DB_NME); // change mysql if needed
 function savant() {
-include_once 'Savant3.php';
-$tpl = new Savant3();
-$tpl->title = KP_NME;
-$tpl->content = $content;
-$tpl->display('index.tpl.php');
+	include_once 'Savant3.php';
+	$tpl = new Savant3();
+	$tpl->setEscape();
+	$tpl->title = KP_NME;
+	$tpl->content = $content;
+	$tpl->display('index.tpl.php');
 }
 ?>
