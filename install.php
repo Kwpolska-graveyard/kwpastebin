@@ -4,7 +4,7 @@
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
 if(CONFIGURED == 'false') {
-	echo "It seems like you haven't configured it. Read INSTALL, dude."
+	echo "It seems like you haven't configured it. Read INSTALL, dude.";
 		die();
 }
 try
