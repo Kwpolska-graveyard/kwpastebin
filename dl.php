@@ -1,6 +1,6 @@
 <?php
 include_once './config.php';
-header('Content-type: text/plain');
+header('Content-Type: text/plain');
 header('Content-Disposition: attachment; filename="'.KP_FLN.'.txt"');
 //KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv3.
