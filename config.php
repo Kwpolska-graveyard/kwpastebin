@@ -17,12 +17,12 @@ $dbdsn = 'mysql:host='.$dbhst.';dbname='.$dbnme; // change mysql if needed
 
 /// DYNAMIC SETTINGS ///
 function savant() {
-	global $content;
-	include_once 'Savant3.php';
-	$tpl = new Savant3();
-	$tpl->setEscape();
-	$tpl->title = KP_NME;
-	$tpl->content = $content;
-	$tpl->display('index.tpl.php');
+   global $content;
+   include_once 'Savant3.php';
+   $tpl = new Savant3();
+   $tpl->setEscape();
+   $tpl->title = KP_NME;
+   $tpl->content = $content;
+   $tpl->display('index.tpl.php');
 }
 ?>
