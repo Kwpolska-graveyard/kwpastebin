@@ -1,19 +1,20 @@
 #form {
-text-align: center;
+   text-align: center;
 }
 pre {
-border: 1px solid #000000;
-margin: 1px;
-padding: 0px;
-max-width: 99%;
-width: 99%;
-white-space: pre-wrap; /* please don't touch it */
+   border: 1px solid #000000;
+   margin: 1px;
+   padding: 0px;
+   max-width: 99%;
+   width: 99%;
+   white-space: pre-wrap; /* please don't touch it */
 }
 
 /* little rules... and nothing else. do what you want.
 what you can change:
 h1
 ul, li - you can make a menu from it
+textarea
 #form
 pre (see above)
 */
