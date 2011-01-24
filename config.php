@@ -1,15 +1,21 @@
 <?php
 //KwPastebin
-//Copyright Kwpolska 2010. Licensed on GPLv3.
-define('CONFIGURED', 'false'); //IMPORTANT: change it to true.
-define('KP_NME', 'KwPastebin'); //the page name
-define('KP_FLN', 'kwpastebin-output'); // output file name, it's txt
-define('DB_USR', 'root'); // the user
-define('DB_PWD', 'password'); // database password
-define('DB_NME', 'db'); //database name
-define('DB_TNM', 'kwpastebin'); //table name
-define('DB_HST', 'localhost'); //host
-define('DB_DSN', 'mysql:host='.DB_HST.';dbname='.DB_NME); // change mysql if needed
+//Copyright Kwpolska 2010-2011.
+
+/// KWPASTBIN SETTINGS ///
+$configured = false; //IMPORTANT: change it to true.
+$sitename =  'KwPastebin'; //the page name
+$outfilename = 'kwpastebin-output'; // output file name, it's txt
+
+/// DATABASE SETTINGS ///
+$dbusr = 'root'; // database user
+$dbpwd = 'password'; // database password
+$dbnme = 'db'; //database name
+$dbtbl = 'kwpastebin'; //table name
+$dbhst = 'localhost'; //host
+$dbdsn = 'mysql:host='.$dbhst.';dbname='.$dbnme; // change mysql if needed
+
+/// DYNAMIC SETTINGS ///
 function savant() {
 	global $content;
 	include_once 'Savant3.php';
