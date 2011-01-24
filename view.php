@@ -9,7 +9,7 @@ try
    $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-   $stmt = $pdo -> prepare('SELECT code, language FROM `'.$dbtnm.'` WHERE `timestamp` = ?');
+   $stmt = $pdo -> prepare('SELECT code, language FROM `'.$dbtbl.'` WHERE `timestamp` = ?');
    $stmt->execute(array($_GET['id']));
    $obj = $stmt->fetch(PDO::FETCH_OBJ);
    $timestamp = substr($_GET['id'], 0, -2);
