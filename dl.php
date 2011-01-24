@@ -6,10 +6,10 @@ header('Content-Disposition: attachment; filename="'.KP_FLN.'.txt"');
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 try
 	{
-		$pdo = new PDO(DB_DSN, DB_USR, DB_PWD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+		$pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       
-		$stmt = $pdo -> prepare('SELECT code, language FROM `'.DB_TNM.'` WHERE `timestamp` = ?');
+		$stmt = $pdo -> prepare('SELECT code, language FROM `'.$dbtbl.'` WHERE `timestamp` = ?');
 		try {
 			  $stmt->execute(array($_GET['id']));
 
