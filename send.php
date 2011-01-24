@@ -16,12 +16,12 @@ try
    $stmt -> bindValue(':language', $_POST['lng'], PDO::PARAM_STR);
    $stmt -> bindValue(':time', $time, PDO::PARAM_STR);
    $ilosc = $stmt -> execute();
-   if($ilosc = 0)
+   if($ilosc = 0) {
       ob_end_flush();
-   die('ERROR: Adding failed!');
-}
-// Okay, we've added it, so now, I have to send user to it...
-header('Location: ./view.php?id='.$time);
+      die('ERROR: Adding failed!');
+   }
+   // Okay, we've added it, so now, I have to send user to it...
+   header('Location: ./view.php?id='.$time);
 }
 catch(PDOException $e)
 {
