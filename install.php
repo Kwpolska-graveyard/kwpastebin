@@ -15,7 +15,7 @@ try
             `code` TEXT NOT NULL ,
             `language` VARCHAR( 50 ) NOT NULL ,
             `timestamp` VARCHAR( 50 ) NOT NULL,
-            `desc` VARCHAR( 250 ) NOT NULL
+            `dsc` VARCHAR( 250 ) NULL
             ) ENGINE = MYISAM');
    echo "I think it's done.";
    unlink('install.php') or die(' failed to remove installer - do it yourself');

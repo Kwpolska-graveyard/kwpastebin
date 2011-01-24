@@ -5,7 +5,6 @@
 /// KWPASTBIN SETTINGS ///
 $configured = false; //IMPORTANT: change it to true.
 $sitename =  'KwPastebin'; //the page name
-$outfilename = 'kwpastebin-output'; // output file name, it's txt
 
 /// DATABASE SETTINGS ///
 $dbusr = 'root'; // database user
