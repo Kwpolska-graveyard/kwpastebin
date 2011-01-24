@@ -6,7 +6,7 @@ ob_start();
 ?>
 <form action="send.php" method="post">
 <div id="form">
-<textarea name="code" rows="25" cols="25" style="width: 99%; height: 25% border-color: #000000;"></textarea><br />
+<textarea name="code" rows="24" cols="80"></textarea><br>
 <select name="lng"> 
 <optgroup label="Popular">
 <option>bash</option> <option>c</option> <option>cpp</option> <option>csharp</option> <option>css</option> <option>html4strict</option> <option>java5</option> <option>java</option> <option>javascript</option> <option>php</option> <option>perl</option> <option>python</option> <option>rails</option> <option>ruby</option> <option>sql</option> <option selected="selected">text</option>
@@ -37,7 +37,7 @@ ob_start();
 <optgroup label="W"><option>whois</option> <option>winbatch</option></optgroup>
 <optgroup label="X"><option>xbasic</option> <option>xml</option> <option>xorg_conf</option> <option>xpp</option></optgroup>
 <optgroup label="Z"><option>z80</option></optgroup> </select> -
-<input type="submit" value="SEND" />
+<input type="submit" value="SEND">
 </div>
 </form>
 <?php
