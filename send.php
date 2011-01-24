@@ -8,13 +8,15 @@ try
    $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $time = time().'.'.rand(0, 9);
-   $stmt = $pdo -> prepare('INSERT INTO `'.$dbtbl.'` (`code`, `language`, `timestamp`)	VALUES(
+   $stmt = $pdo -> prepare('INSERT INTO `'.$dbtbl.'` (`code`, `language`, `timestamp`, `desc` ) VALUES(
             :code,
             :language,
-            :time)');
+            :time,
+            :desc)');
    $stmt -> bindValue(':code', $_POST['code'], PDO::PARAM_STR);
    $stmt -> bindValue(':language', $_POST['lng'], PDO::PARAM_STR);
    $stmt -> bindValue(':time', $time, PDO::PARAM_STR);
+   $stmt -> bindValue(':desc', $_POST['desc'], PDO::PARAM_STR);
    $ilosc = $stmt -> execute();
    if($ilosc = 0) {
       ob_end_flush();
