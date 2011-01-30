@@ -45,7 +45,7 @@ $content = ob_get_clean();
 
 if ($open == false && $_GET['key'] != $closedkey) $content = 'Posting is locked and you haven\'t provided a valid key. <form action="index.php" method="GET"><input type="text" name="key"> <input type="submit" value="UNLOCK"></form>';
 
-if(isset($_GET['id']) {
+if(isset($_GET['id'])) {
       include_once './geshi.php';
       ob_start();
       try
