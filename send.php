@@ -24,7 +24,7 @@ try
       die('ERROR: Adding failed!');
    }
    // Okay, we've added it, so now, I have to send user to it...
-   header('Location: ./view.php?id='.$time);
+   header('Location: ./index.php?id='.$time);
 }
 catch(PDOException $e)
 {
