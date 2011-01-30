@@ -3,6 +3,7 @@ ob_start();
 //KwPastebin
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
+if ($open == false && $_POST['key'] != $closedkey) $content = 'Posting is locked and you haven\'t provided a valid key. <form action="index.php" method="GET"><input type="text" name="key"> <input type="submit" value="UNLOCK"></form>';
 try
 {
    $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));

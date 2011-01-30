@@ -38,8 +38,10 @@ ob_start();
 <optgroup label="X"><option>xbasic</option> <option>xml</option> <option>xorg_conf</option> <option>xpp</option></optgroup>
 <optgroup label="Z"><option>z80</option></optgroup> </select> <input type="text" name="desc"> &mdash; <input type="submit" value="SEND">
 </div>
+<input type="hidden" name="key" value="<?php $_GET['key']; ?>">
 </form>
 <?php
 $content = ob_get_clean();
+if ($open == false && $_GET['key'] != $closedkey) $content = 'Posting is locked and you haven\'t provided a valid key. <form action="index.php" method="GET"><input type="text" name="key"> <input type="submit" value="UNLOCK"></form>';
 savant();
 ?>
