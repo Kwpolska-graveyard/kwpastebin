@@ -46,10 +46,10 @@ $content = ob_get_clean();
 if ($open == false && $_GET['key'] != $closedkey) $content = 'Posting is locked and you haven\'t provided a valid key. <form action="index.php" method="GET"><input type="text" name="key"> <input type="submit" value="UNLOCK"></form>';
 
 if(isset($_GET['id'])) {
-      include_once './geshi.php';
-      ob_start();
-      try
-      {
+   include_once './geshi.php';
+   ob_start();
+   try
+   {
       $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -64,12 +64,12 @@ if(isset($_GET['id'])) {
       $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS, 2); $geshi->set_line_style('background: #fcfcfc;', 'background: #f0f0f0;'); //this determines the line styles; even = grey, odd - white-ish.
       echo $geshi->parse_code();
       $stmt -> closeCursor();
-      }
-      catch(PDOException $e)
-      {
-         echo 'ERROR: ' . $e->getMessage();
-      }
-      $content = ob_get_clean();
+   }
+   catch(PDOException $e)
+   {
+      echo 'ERROR: ' . $e->getMessage();
+   }
+   $content = ob_get_clean();
 }
 
 savant();
