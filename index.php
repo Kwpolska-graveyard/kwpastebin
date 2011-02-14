@@ -36,7 +36,7 @@ ob_start();
 <optgroup label="V"><option>vala</option> <option>vbnet</option> <option>vb</option> <option>verilog</option> <option>vhdl</option> <option>vim</option> <option>visualfoxpro</option> <option>visualprolog</option> <option>whitespace</option>
 <optgroup label="W"><option>whois</option> <option>winbatch</option></optgroup>
 <optgroup label="X"><option>xbasic</option> <option>xml</option> <option>xorg_conf</option> <option>xpp</option></optgroup>
-<optgroup label="Z"><option>z80</option></optgroup> </select> <input type="text" name="desc"> &mdash; <input type="submit" value="SEND">
+<optgroup label="Z"><option>z80</option></optgroup> </select> &mdash; Description: <input type="text" name="desc"> &mdash; <input type="submit" value="SEND">
 </div>
 <input type="hidden" name="key" value="<?php $_GET['key']; ?>">
 </form>
@@ -52,7 +52,6 @@ if(isset($_GET['id'])) {
    {
       $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
       $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
       $stmt = $pdo -> prepare('SELECT code, language, dsc FROM `'.$dbtbl.'` WHERE `timestamp` = ?');
       $stmt->execute(array($_GET['id']));
       $obj = $stmt->fetch(PDO::FETCH_OBJ);
