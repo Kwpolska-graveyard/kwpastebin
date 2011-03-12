@@ -22,7 +22,7 @@ if(isset($_GET['id'])) {
         $geshi = new GeSHI($obj->code, $obj->language);
         if($_COOKIE['kwpstln'] == 1) {
             $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS, 2);
-            $geshi->set_line_style('background: #fcfcfc;', 'background: #f0f0f0;'); //this determines the line styles; even = grey, odd - white-ish.
+            $geshi->set_line_style('background: #fcfcfc;', 'background: #f0f0f0;'); //this determines the line styles.
             //                                  odd (white-ish)         even (grey)
         } else {
             $geshi->enable_line_numbers(GESHI_NO_LINE_NUMBERS);

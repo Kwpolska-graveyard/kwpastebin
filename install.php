@@ -4,7 +4,7 @@
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
 if($configured == 'false') {
-   echo "It seems like you haven't configured it. Read INSTALL, dude.";
+   echo "It seems like you haven't configured it. Read INSTALL.markdown, dude.";
    die();
 }
 try
@@ -18,7 +18,7 @@ try
             `dsc` VARCHAR( 250 ) NULL
             ) ENGINE = MYISAM');
    echo "I think it's done.";
-   unlink('install.php') or die(' failed to remove installer - do it yourself');
+   unlink('install.php') or die(' failed to remove installer -- do it yourself');
 }
 catch(PDOException $e)
 {
