@@ -17,8 +17,7 @@ if(isset($_GET['id'])) {
         $timestamp = substr($_GET['id'], 0, -2);
         $dsc = $obj->dsc;
         if($dsc == '') $dsc .= 'no user notes';
-        if(isset($_GET['key']) $key = '&key='.$_GET['key']; else $key = '';
-        echo '<a href="./plain.php?id='.$_GET['id'].'">plaintext</a> &mdash; <a href="./dl.php?id='.$_GET['id'].'">download</a> &mdash; added '.date('F jS, Y \a\t h:i:s A T', $timestamp).' &mdash; <em>'.$dsc.'</em> &mdash; <a href="./lnumbers.php?id='.$_GET['id'].$key.'>Toggle line numbers</a> &mdash; hilighted by <a href="http://qbnz.com/highlighter/">GeSHi</a><br>';
+        echo '<a href="./plain.php?id='.$_GET['id'].'">plaintext</a> &mdash; <a href="./dl.php?id='.$_GET['id'].'">download</a> &mdash; added '.date('F jS, Y \a\t h:i:s A T', $timestamp).' &mdash; <em>'.$dsc.'</em> &mdash; <a href="./lnumbers.php?id='.$_GET['id'].'>Toggle line numbers</a> &mdash; hilighted by <a href="http://qbnz.com/highlighter/">GeSHi</a><br>';
         $geshi = new GeSHI($obj->code, $obj->language);
         if($_COOKIE['kwpstln'] == 1) {
             $geshi->enable_line_numbers(GESHI_FANCY_LINE_NUMBERS, 2);

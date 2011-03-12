@@ -8,8 +8,7 @@ if (isset($_COOKIE['kwpstln'])) {
     } else {
         setcookie('kwpstln', 1, 2147483640);
     }
-    if(isset($_GET['key'])) $key = $_GET['key']; else $key = '';
-    header('Location: ./index.php?id='.$_GET['id'].$key);
+    header('Location: ./index.php?id='.$_GET['id']);
     ob_end_flush();
 }
 ?>

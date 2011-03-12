@@ -3,7 +3,7 @@
 //Part of KRU
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
-if($configured == 'false') {
+if($configured == false) {
    echo "It seems like you haven't configured it. Read INSTALL.markdown, dude.";
    die();
 }
