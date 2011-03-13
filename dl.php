@@ -6,10 +6,12 @@ header('Content-Disposition: attachment; filename="'.$_GET['id'].'.txt"');
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 try
 {
-    $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND
+    => "SET NAMES utf8"));
     $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $pdo -> prepare('SELECT code, language FROM `'.$dbtbl.'` WHERE `timestamp` = ?');
+    $stmt = $pdo -> prepare('SELECT code, language FROM `'.$dbtbl.'` WHERE
+    `pasteid` = ?');
     try {
         $stmt->execute(array($_GET['id']));
 
