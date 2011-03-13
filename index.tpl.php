@@ -15,7 +15,9 @@ Copyright Kwpolska 2010. Licensed on GPLv3. -->
 </ul>
 <?php echo $this->eprint($this->content); ?>
 <div id="footer">
-KwPastebin - Copyright Kwpolska 2010. Licensed on GPLv3. Using <a href="http://phpsavant.com">Savant</a>. <!--don't edit it, put your copyright notice above-->
+KwPastebin - Copyright Kwpolska 2010. Licensed on GPLv3. Using <a
+href="http://phpsavant.com">Savant</a>. <!--don't edit it, put your copyright
+notice above-->
 </div>
 </body>
 </html>

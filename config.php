@@ -6,7 +6,8 @@
 $configured = false; //IMPORTANT: change it to true
 $sitename = 'KwPastebin'; //the page name
 $open = true; //possibility of adding new pastes
-$closedkey = 'forceadd'; // index.php?key=$closedkey forces the script to let you add something
+$closedkey = 'forceadd'; // index.php?key=$closedkey forces the script to let
+                         // you add something
 
 /// DATABASE SETTINGS ///
 $dbusr = 'root'; //database user

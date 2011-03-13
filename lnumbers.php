@@ -4,7 +4,9 @@
 
 if (isset($_COOKIE['kwpstln'])) {
     if ($_COOKIE['kwpstln'] == 1) {
-        setcookie('kwpstln', 0, 2147483640); //cookie will be removed 7 seconds before y2k38, who will make use of it to this date?
+        setcookie('kwpstln', 0, 2147483640); //cookie will be removed 7 seconds
+                                             //before y2k38.  unless the user
+                                             //wouldn't do it himself.
     } else {
         setcookie('kwpstln', 1, 2147483640);
     }
