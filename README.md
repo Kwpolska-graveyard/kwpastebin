@@ -1,4 +1,4 @@
-KwPastebin. First steps at git.
+KwPastebin. The easiest pastebin ever made.
 ==============
 
 PURPOSE

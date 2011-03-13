@@ -1,4 +1,5 @@
-The KwPastebin is changing.  With each modification some compatibility is lost.
+The KwPastebin is changing.  With each modification some backwards
+compatibility is lost. This is a list of them with an explaination.
 
 Major updates list
 ==================
