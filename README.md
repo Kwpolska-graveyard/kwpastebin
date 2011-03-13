@@ -7,7 +7,19 @@ Pastebin. Simple pastebin.
 
 INSTALLATION
 ------------
-Check out INSTALL.
+
+1. Put the files on your server.
+2. Edit the config.php.
+3. Execute the install.php file (you can do it form the command line, too).
+4. That's it!
+
+UPGRADE
+-------
+
+Before upgrading the script you shall read the COMPATIBILITY.md file. It will
+inform you about all the major changes.  This project is in development
+all the time.  The database or behavior might be changed in a bigger way.  A
+note to COMPATIBILITY.md will be added with each major upgrade.
 
 COPYRIGHT
 ---------
