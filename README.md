@@ -21,6 +21,12 @@ inform you about all the major changes.  This project is in development
 all the time.  The database or behavior might be changed in a bigger way.  A
 note to COMPATIBILITY.md will be added with each major upgrade.
 
+The COMPATIBILITY.md file is available in the github repository.  You can also
+find it at
+<https://github.com/Kwpolska/kwpastebin/raw/master/COMPATIBILITY.md>
+or (if you like to read nice HTML)
+<https://github.com/Kwpolska/kwpastebin/blob/master/COMPATIBILITY.md>.
+
 COPYRIGHT
 ---------
 Copyright (C) 2010 Kwpolska.
