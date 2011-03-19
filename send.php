@@ -20,10 +20,11 @@ try
                                             :language,
                                             :time,
                                             :desc,
-                                            '1',
+                                            1,
                                             :rmid)');
+    $pasteid =  uniqid();
     $stmt -> bindValue(':code', $_POST['code'], PDO::PARAM_STR);
-    $stmt -> bindValue(':pasteid', uniqid(), PDO::PARAM_STR);
+    $stmt -> bindValue(':pasteid', $pasteid, PDO::PARAM_STR);
     $stmt -> bindValue(':language', $_POST['lng'], PDO::PARAM_STR);
     $stmt -> bindValue(':time', $time, PDO::PARAM_INT);
     $stmt -> bindValue(':desc', $_POST['desc'], PDO::PARAM_STR);
@@ -34,7 +35,7 @@ try
         die('ERROR: Adding failed!');
     }
     // Okay, we've added it, so now, I have to send user to it...
-    header('Location: ./index.php?id='.$time);
+    header('Location: ./index.php?id='.$pasteid);
 }
 catch(PDOException $e)
 {

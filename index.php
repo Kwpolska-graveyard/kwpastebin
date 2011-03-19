@@ -66,7 +66,7 @@ if(isset($_GET['id'])) {
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $pdo->prepare('SELECT * FROM `'.$dbtbl.'` WHERE
                                `pasteid` = ?');
-        //fields: pateid, code, language, timestamp, dsc, rmable, rmid
+        //fields: pasteid, code, language, timestamp, dsc, rmable, rmid
         $stmt->execute(array($_GET['id']));
         $obj = $stmt->fetch(PDO::FETCH_OBJ);
         $dsc = $obj->dsc;
@@ -91,7 +91,7 @@ if(isset($_GET['id'])) {
             echo "You can use the id at the deletion page.  Don't share it.  
             The ID willn't show up anymore.";
             $stmt->closeCursor();
-            $stmt = $pdo->prepare('UPDATE `'.$dbtbl.'` SET `rmable` = `0`
+            $stmt = $pdo->prepare('UPDATE `'.$dbtbl.'` SET `rmable` = 0
             WHERE `pasteid` = ?');
             $stmt->execute(array($_GET['id']));
          } 
