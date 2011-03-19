@@ -4,8 +4,7 @@
 //Copyright Kwpolska 2010. Licensed on GPLv3.
 include_once './config.php';
 if($configured == false) {
-   echo "It seems like you haven't configured it.  Read INSTALL.markdown,
-   dude.";
+   echo "It seems like you haven't configured it.  Read README.md.";
    die();
 }
 try
@@ -14,18 +13,21 @@ try
    "SET NAMES utf8"));
    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $stmt = $pdo -> exec('CREATE TABLE  `'.$dbtbl.'` (
-                        `code` TEXT NOT NULL ,
-                        `pasteid` VARCHAR( 100 ) NOT NULL,
-                        `language` VARCHAR( 50 ) NOT NULL ,
-                        `timestamp` VARCHAR( 50 ) NOT NULL,
-                        `dsc` VARCHAR( 250 ) NULL
+                        `pasteid` VARCHAR(100) NOT NULL,
+                        `timestamp` INT(50) NOT NULL,
+                        `language` VARCHAR(50) NOT NULL,
+                        `dsc` VARCHAR(250) NULL,
+                        `rmable` TINYINT(1) NOT NULL,
+                        `rmid` VARCHAR(100) NOT NULL,
+                        `code` TEXT NOT NULL,
+                        PRIMARY KEY (`pasteid`)
                         ) ENGINE = MYISAM');
-   echo "I think it's done.";
-   unlink('install.php') or die(' failed to remove installer -- do it
+   echo "The KwPastebin was successfully installed.";
+   @unlink('install.php') or die(' failed to remove installer -- do it
    yourself');
 }
 catch(PDOException $e)
 {
-   echo 'It failed. (code: none), error message:' . $e->getMessage();
+   echo 'Error message:' . $e->getMessage();
 }
 ?>
