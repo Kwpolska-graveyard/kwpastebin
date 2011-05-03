@@ -1,9 +1,9 @@
-KwPastebin. The easiest pastebin ever made.
+KwPastebin.  The easiest pastebin ever made.
 ==============
 
 PURPOSE
 -------
-Pastebin. Simple pastebin.
+Pastebin.  Simple pastebin.
 
 INSTALLATION
 ------------
@@ -16,10 +16,10 @@ INSTALLATION
 UPGRADE
 -------
 
-Before upgrading the script you shall read the COMPATIBILITY.md file. It will
+Before upgrading the script you shall read the COMPATIBILITY.md file.  It will
 inform you about all the major changes.  This project is in development
-all the time.  The database or behavior might be changed in a bigger way.  A
-note to COMPATIBILITY.md will be added with each major upgrade.
+all the time.  The database or behavior might be changed in a bigger way.
+A note to COMPATIBILITY.md will be added with each major upgrade.
 
 The COMPATIBILITY.md file is available in the github repository.  You can also
 find it at
