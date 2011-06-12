@@ -7,10 +7,8 @@ if($configured == false) {
    echo "It seems like you haven't configured it.  Read README.md.";
    die();
 }
-try
-{
-   $pdo = new PDO($dbdsn, $dbusr, $dbpwd, array(PDO::MYSQL_ATTR_INIT_COMMAND =>
-   "SET NAMES utf8"));
+try {
+   $pdo = createPDO();
    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    $stmt = $pdo -> exec('CREATE TABLE  `'.$dbtbl.'` (
                         `pasteid` VARCHAR(100) NOT NULL,
@@ -21,13 +19,12 @@ try
                         `rmid` VARCHAR(100) NOT NULL,
                         `code` TEXT NOT NULL,
                         PRIMARY KEY (`pasteid`)
-                        ) ENGINE = MYISAM');
+                        )');
    echo "The KwPastebin was successfully installed.";
    @unlink('install.php') or die(' failed to remove installer -- do it
    yourself');
 }
-catch(PDOException $e)
-{
+catch(PDOException $e) {
    echo 'Error message:' . $e->getMessage();
 }
 ?>

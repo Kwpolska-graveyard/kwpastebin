@@ -10,12 +10,38 @@ $closedkey = 'forceadd'; // index.php?key=$closedkey forces the script to let
                          // you add something
 
 /// DATABASE SETTINGS ///
+
+$dbsys = 'mysql'; //Valid ones are: 'mysql', 'sqlite'
+                  //Support for others is not available right now.
+
+# Edit the one that you want to use, don't modify the other one.
+
+// MYSQL //
 $dbusr = 'root'; //database user
 $dbpwd = 'password'; //database password
 $dbnme = 'db'; //database name
 $dbtbl = 'kwpastebin'; //table name
 $dbhst = 'localhost'; //host
-$dbdsn = 'mysql:host='.$dbhst.';dbname='.$dbnme; //change mysql if needed
+$dbdsn = 'mysql:host='.$dbhst.';dbname='.$dbnme; //don't modify
+
+// SQLITE //
+$dblocation = 'kwpastebin.sqlite'; //Valid ones are: a file, ':memory:'
+
+function createPDO() {
+    global $dbsys, $dbdsn, $dbusr, $dbpwd;
+    switch($dbsys) {
+        case 'mysql':
+            return new PDO($dbdsn, $dbusr, $dbpwd,
+                           array(PDO::MYSQL_ATTR_INIT_COMMAND =>
+                                 "SET NAMES utf8"));
+            break;
+        case 'sqlite':
+            return new PDO('sqlite:'.$dblocation);
+            break;
+        default:
+            echo 'The RDBMS '$dbsys.' is not supported by KwPastebin.';
+    }
+}
 
 /// DYNAMIC SETTINGS ///
 function savant() {

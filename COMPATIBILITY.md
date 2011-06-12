@@ -9,12 +9,13 @@ Major updates list
 This is a ``changelog" for the project.  Only the important modifications that
 modify the database/behavior/etc are listed.  The dates are in mm/dd/yy format.
 
-    +----------+----------+------------------------+--------------------------+
-    | date     | type     | reason                 | changes                  |
-    +----------+----------+------------------------+--------------------------+
-    | 03/19/11 | db, bhvr | Removal, DB reorganis. | +rmable, +rmid, +del.php |
-    | 03/13/11 | database | New unique IDs         | +pasteid, mod. timestamp |
-    +----------+----------+------------------------+--------------------------+
+    +-----------+-----------+-------------------+---------------------------+
+    | date      | type      | reason            | changes                   |
+    +-----------+-----------+-------------------+---------------------------+
+    | 06/12/11  | db, cfg   | SQLite support    | config, all php files     |
+    | 03/19/11  | db, bhvr  | P rem., db ch.    | +rmable, +rmid, +del.php  |
+    | 03/13/11  | db        | New unique IDs    | +pasteid, mod. timestamp  |
+    +-----------+-------- --+-------------------+---------------------------+
 
 Please read the following explainations and (if needed) execute the
 approperiate file(s) from the /upgrade/ directory.
@@ -25,13 +26,27 @@ Explainations
 This is an explaination of all the updates made to the project (newest comes
 first).  All the dates are in mm/dd/yy format.
 
+06/12/11
+--------
+
+          Date: June 12th, 2011  
+          Type: Database and config modification
+        Reason: Adding SQLite support
+       Changes: All own PHP files (incl. config) changed
+
+SQLite support was added this time.  Because of that, the following changes
+were made:
+
+ * new connection routine
+ * modified config file
+
 03/19/11
 --------
 
-       Date: March 19th, 2011  
-       Type: Database and behavior modification
-     Reason: Removal features, DB reogranization
-    Changes: Added the file del.php, db changes described below
+          Date: March 19th, 2011  
+          Type: Database and behavior modification  
+        Reason: Removal features, DB reogranization  
+       Changes: Added the file del.php, db changes described below
 
 The update is really big.  The first new feature is removal.  Two new fields
 was added to protect abuse.  They are ``rmable" and ``rmid".  The ``rmable"
@@ -61,8 +76,8 @@ Another new feature are the upgrade files.  You can use them to change the datab
 --------
 
        Date: March 13th, 2011  
-       Type: Database modification
-     Reason: New unique IDs.
+       Type: Database modification  
+     Reason: New unique IDs.  
     Changes: Added the field pasteid, modified the timestamp field.
 
 This modification replaced relying on the current timestamp and a random number

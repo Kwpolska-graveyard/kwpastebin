@@ -8,12 +8,10 @@ locked and you haven\'t provided a valid key. <form action="index.php"
 method="GET"><input type="text" name="key"> <input type="submit"
 value="UNLOCK"></form>';
 if(isset($_GET['rmid'])) {
-    try
-    {
-        $pdo = new PDO($dbdsn, $dbusr, $dbpwd,
-                      array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    try {
+        $pdo = createPDO();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $pdo->prepare('SELECT rmid FROM `'.$dbtbl.'` 
+        $stmt = $pdo->prepare('SELECT rmid FROM `'.$dbtbl.'`
                 WHERE `pasteid` = ?');
         $stmt->execute(array($_GET['id']));
         $obj = $stmt->fetch(PDO::FETCH_OBJ);
@@ -24,13 +22,12 @@ if(isset($_GET['rmid'])) {
                     WHERE `pasteid` = ?');
             $stmt->execute(array($_GET['id']));
             echo "The paste was removed.";
-        } else { 
-            echo "Wrong code. Did not remove.";
+        } else {
+            echo "Incorrect code. Did not remove.";
         }
         $stmt->closeCursor();
     }
-    catch(PDOException $e)
-    {
+    catch(PDOException $e) {
         echo 'ERROR: ' . $e->getMessage();
     }
 } else {
