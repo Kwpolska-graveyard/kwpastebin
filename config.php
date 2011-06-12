@@ -39,7 +39,7 @@ function createPDO() {
             return new PDO('sqlite:'.$dblocation);
             break;
         default:
-            echo 'The RDBMS '$dbsys.' is not supported by KwPastebin.';
+            echo 'The RDBMS '.$dbsys.' is not supported by KwPastebin.';
     }
 }
 
