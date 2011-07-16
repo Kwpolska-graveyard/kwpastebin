@@ -12,7 +12,7 @@ modify the database/behavior/etc are listed.  The dates are in mm/dd/yy format.
     +-----------+-----------+-------------------+---------------------------+
     | date      | type      | reason            | changes                   |
     +-----------+-----------+-------------------+---------------------------+
-    | 06/12/11  | db, cfg   | SQLite support    | config, all php files     |
+    | 07/16/11  | db, cfg   | SQLite support    | config, all php files     |
     | 03/19/11  | db, bhvr  | P rem., db ch.    | +rmable, +rmid, +del.php  |
     | 03/13/11  | db        | New unique IDs    | +pasteid, mod. timestamp  |
     +-----------+-------- --+-------------------+---------------------------+
@@ -26,10 +26,10 @@ Explainations
 This is an explaination of all the updates made to the project (newest comes
 first).  All the dates are in mm/dd/yy format.
 
-06/12/11
+07/16/11
 --------
 
-          Date: June 12th, 2011  
+          Date: July 16th, 2011  
           Type: Database and config modification
         Reason: Adding SQLite support
        Changes: All own PHP files (incl. config) changed

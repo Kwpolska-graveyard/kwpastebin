@@ -64,7 +64,7 @@ if(isset($_GET['id'])) {
         $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $pdo->prepare('SELECT * FROM `'.$dbtbl.'` WHERE
                                `pasteid` = ?');
-        //fields: pasteid, code, language, timestamp, dsc, rmable, rmid
+        //fields: pasteid, code, language, timestamp, dsc, rmable, rmid, owner
         $stmt->execute(array($_GET['id']));
         $obj = $stmt->fetch(PDO::FETCH_OBJ);
         $dsc = $obj->dsc;
