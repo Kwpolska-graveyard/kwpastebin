@@ -28,7 +28,7 @@ $dbdsn = 'mysql:host='.$dbhst.';dbname='.$dbnme; //don't modify
 $dblocation = 'kwpastebin.sqlite'; //Valid ones are: a file, ':memory:'
 
 function createPDO() {
-    global $dbsys, $dbdsn, $dbusr, $dbpwd;
+    global $dbsys, $dbdsn, $dbusr, $dbpwd, $dblocation;
     switch($dbsys) {
     case 'mysql':
         return new PDO($dbdsn, $dbusr, $dbpwd,
