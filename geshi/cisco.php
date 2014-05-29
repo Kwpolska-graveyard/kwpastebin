@@ -1,6 +1,6 @@
 <?php
 /*************************************************************************************
- * tcl.php
+ * cisco.php
  * ---------------------------------
  * Author: Michael Englehorn (michael@englehorn.com)
  * Copyright: (c) 2014 Michael Englehorn (michael@englehorn.com)
@@ -38,7 +38,7 @@ $language_data = array (
         //2 => '/{[^}\n]+}/'
         ),
     'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
-    'QUOTEMARKS' => array('"', "'"),
+    'QUOTEMARKS' => array(),
     'ESCAPE_CHAR' => '',
     'KEYWORDS' => array(
         /*
@@ -58,7 +58,9 @@ $language_data = array (
 	    'multilink', 'voice-card', 'voice', 'username', 'archive', 'controller',
 	    'policy-map', 'class-map', 'interface', 'access-list', 'snmp-server',
 	    'tacacs-server', 'control-plane', 'voice-port', 'dial-peer', 'sip-ua',
-	    'banner exec', 'banner login', 'line con', 'line vty', 'line aux', 'ntp'
+	    'banner exec', 'banner login', 'line con', 'line vty', 'line aux', 'ntp',
+	    'crypto', 'trunk', 'virtual-profile', 'route-map', 'radius-server', 'gateway', 'end',
+	    'router eigrp', 'router rip', 'router bgp', 'router ospf', 'router is-is'
 	),
 
         /*
@@ -82,7 +84,14 @@ $language_data = array (
 		'timeouts interdigit', 'cor', 'huntstop', 'preference', 'progress_ind setup', 'session protocol', 'session target',
 		'incoming called-number', 'dtmf-relay', 'codec', 'fax rate', 'vad', 'hunt', 'terminator', 'hookflash-info',
 		'remote-party-id', 'set', 'retry', 'timers', 'mwi-server', 'expires', 'port', 'transport', 'udp', 'unsolicited',
-		'registrar', 'sip-server', 'password', 'transport input', 'clock-period', 'source', 'master', 'server', 'prefer'
+		'registrar', 'sip-server', 'password', 'transport input', 'clock-period', 'source', 'master', 'server', 'prefer',
+		'nat', 'tcp', 'inside', 'static', 'authorization', 'group', 'radius', 'boot system', 'pki trustpoint',
+		'enrollment terminal', 'serial-number', 'revocation-check', 'ipv6', 'icmp', 'evaluate', 'match', 'privilege level',
+		'login', 'modem InOut', 'flowcontrol', 'peer', 'timer receive-rtp', 'physical-layer', 'dialer', 'async mode',
+		'ppp reliable-link', 'ppp encrypt', 'group-range', 'redistribute', 'passive-interface', 'network', 'default-metric',
+		'auto-summary', 'bgp log-neighbor-changes', 'remote-as', 'address-family', 'synchronization', 'neighbor',
+		'default-information', 'glbp', 'tunnel', 'encr', 'lifetime', 'hunt-scheme', 'dhcp use', 'dhcp pool', 'vrf',
+		'multicast-routing', 'ddns update', 'interval maximum', 'interval minimum', 'unicast-routing'
             ),
 
         /*
