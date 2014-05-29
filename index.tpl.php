@@ -11,6 +11,7 @@ Copyright Kwpolska 2010. Licensed on GPLv3. -->
 <h1><?php echo $this->eprint($this->title); ?></h1>
 <ul>
 <li><a href="index.php">Add</a></li>
+<li><a href="del.php">Del</a></li>
 <li><form action="index.php" method="get">Go to: #<input name="id"></form></li>
 </ul>
 <?php echo $this->eprint($this->content); ?>
