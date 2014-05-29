@@ -20,7 +20,7 @@ selected="selected">text</option>
 <optgroup label="#"><option>4cs</option>
 <optgroup label="A"><option>abap</option> <option>actionscript3</option> <option>actionscript</option> <option>ada</option> <option>apache</option> <option>applescript</option> <option>apt_sources</option> <option>asm</option> <option>asp</option> <option>autoconf</option> <option>autohotkey</option> <option>autoit</option> <option>avisynth</option> <option>awk</option>
 <optgroup label="B"><option>basic4gl</option> <option>bf</option> <option>bibtex</option> <option>blitzbasic</option> <option>bnf</option> <option>boo</option> 
-<optgroup label="C"><option>caddcl</option> <option>cadlisp</option> <option>cfdg</option> <option>cfm</option> <option>chaiscript</option> <option>cil</option> <option>clojure</option> <option>c_mac</option> <option>cmake</option> <option>cobol</option> <option>cpp-qt</option> <option>cuesheet</option>
+<optgroup label="C"><option>caddcl</option> <option>cadlisp</option> <option>cfdg</option> <option>cfm</option> <option>chaiscript</option> <option>cisco</option> <option>cil</option> <option>clojure</option> <option>c_mac</option> <option>cmake</option> <option>cobol</option> <option>cpp-qt</option> <option>cuesheet</option>
 <optgroup label="D"><option>dcs</option> <option>delphi</option> <option>diff</option> <option>div</option> <option>dos</option> <option>dot</option> <option>d</option>
 <optgroup label="E"><option>ecmascript</option> <option>eiffel</option> <option>email</option> <option>erlang</option>
 <optgroup label="F"><option>fo</option> <option>fortran</option> <option>freebasic</option> <option>fsharp</option>
@@ -87,7 +87,7 @@ if(isset($_GET['id'])) {
         if($obj->rmable == '1') {
             echo "Removal ID: ".$obj->rmid.'<br>';
             echo "You can use the id at the deletion page.  Don't share it.  
-            The ID willn't show up anymore.";
+            The ID won't show up anymore.";
             $stmt->closeCursor();
             $stmt = $pdo->prepare('UPDATE `'.$dbtbl.'` SET `rmable` = 0
             WHERE `pasteid` = ?');

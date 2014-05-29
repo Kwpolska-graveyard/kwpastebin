@@ -29,6 +29,7 @@ This is a list of files inside this directory. Remove the .php part to create a 
  * cfdg.php
  * cfm.php
  * chaiscript.php
+ * cisco.php
  * cil.php
  * clojure.php
  * c_mac.php

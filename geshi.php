@@ -1366,6 +1366,7 @@ class GeSHi {
                 'caddcl' => array(),
                 'cadlisp' => array(),
                 'cdfg' => array('cdfg'),
+		'cisco' => array('cisco'),
                 'cobol' => array('cbl'),
                 'cpp' => array('cpp', 'hpp', 'C', 'H', 'CPP', 'HPP'),
                 'csharp' => array('cs'),
