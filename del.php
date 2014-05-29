@@ -13,14 +13,14 @@ if(isset($_GET['rmid'])) {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $pdo->prepare('SELECT rmid FROM `'.$dbtbl.'`
                 WHERE `pasteid` = ?');
-        $stmt->execute(array($_GET['id']));
+        $stmt->execute(array($_GET['pasteid']));
         $obj = $stmt->fetch(PDO::FETCH_OBJ);
 
         if($_GET['rmid'] == $obj->rmid) {
             $stmt->closeCursor();
             $stmt = $pdo->prepare('DELETE FROM `'.$dbtbl.'`
                     WHERE `pasteid` = ?');
-            $stmt->execute(array($_GET['id']));
+            $stmt->execute(array($_GET['pasteid']));
             echo "The paste was removed.";
         } else {
             echo "Incorrect code. Did not remove.";
