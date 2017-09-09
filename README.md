@@ -1,5 +1,10 @@
 KwPastebin.  The easiest pastebin ever made.
-==============
+============================================
+
+NOTE FROM THE FUTURE
+--------------------
+
+This project is abandoned, but I reused the name for something new, supported, and much more elegant: [django-kwpastebin](https://github.com/Kwpolska/django-kwpastebin).
 
 PURPOSE
 -------
